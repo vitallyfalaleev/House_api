@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/index'
   devise_for :users,
              path: '',
              path_names: {
@@ -10,4 +11,5 @@ Rails.application.routes.draw do
                  sessions: 'sessions',
                  registrations: 'registrations'
              }
+  match '/users',   to: 'users#index',   via: 'get'
 end
