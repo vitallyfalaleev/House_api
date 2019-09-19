@@ -12,4 +12,5 @@ Rails.application.routes.draw do
                  registrations: 'registrations'
              }
   match '/users',   to: 'users#index',   via: 'get'
+  match '/users/:id',   to: 'users#show',   via: 'get'
 end
